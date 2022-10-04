@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            background-color: silver;
+            font-family: 'Century Gothic';
+        }
+
+        .input {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .num1 {
+            display: flex;
+            align-items: stretch;
+        }
+
+        button {
+            color: wheat;
+            background-color: black;
+            font-size: 32px;
+        }
+
+        button:hover {
+            cursor: pointer;
+            box-shadow: 5px;
+            background-color: wheat;
+            color: black;
+
+        }
+        #result{
+            width: 200px;
+            background-color: black;
+            color: gold;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 align="center">CALCULATOR</h1>
+        <br><br>
+        <div class="input">
+            <div class="num1">
+                <label for="num1">1st Number:-</label>
+                <input type="number" id="num1">
+            </div>
+            <div class="num1">
+                <label for="num2">2nd Number:-</label>
+                <input type="number" id="num2">
+            </div>
+        </div><br><br><br>
+        <center>
+            <div>
+
+                <button onclick="sum()">+</button>
+                <button onclick="dif()">-</button>
+                <button onclick="multi()">x</button>
+                <button onclick="divi()">/</button>
+            </div>
+            <p id="result"></p>
+        </center>
+    </div>
+    <script>
+        const sum = () => {
+            const numbr1 = document.getElementById("num1");
+            const numbr2 = document.getElementById("num2");
+            const result = document.getElementById("result");
+            const num1 = Number(numbr1.value);
+            const num2 = Number(numbr2.value);
+            result.innerHTML = ("Answer:",num1 + num2);
+        }
+        const dif = () => {
+            const numbr1 = document.getElementById("num1");
+            const numbr2 = document.getElementById("num2");
+            const result = document.getElementById("result");
+            const num1 = Number(numbr1.value);
+            const num2 = Number(numbr2.value);
+            result.innerHTML = ("Answer:",num1 - num2);
+        }
+        const multi = () => {
+            const numbr1 = document.getElementById("num1");
+            const numbr2 = document.getElementById("num2");
+            const result = document.getElementById("result");
+            const num1 = Number(numbr1.value);
+            const num2 = Number(numbr2.value);
+            result.innerHTML = ("Answer:",num1 * num2)
+        }
+        const divi = () => {
+            const numbr1 = document.getElementById("num1");
+            const numbr2 = document.getElementById("num2");
+            const result = document.getElementById("result");
+            const num1 = Number(numbr1.value);
+            const num2 = Number(numbr2.value);
+            result.innerHTML = ("Answer:",num1 / num2);
+        }
+    </script>
+</body>
+
+</html>
